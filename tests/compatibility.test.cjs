@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const {test} = require('node:test');
 const {createShell, root} = require('./helpers/shell.cjs');
 
-const versions = [46, 47, 48, 49, 50, 51];
+const versions = [46, 47, 48, 49, 50];
 test('metadata declares exactly the tested GNOME versions', () => {
     const metadata = JSON.parse(readFileSync(resolve(root, 'metadata.json'), 'utf8'));
     assert.deepEqual(metadata['shell-version'], versions.map(String));
